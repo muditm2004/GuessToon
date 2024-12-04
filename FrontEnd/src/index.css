@@ -1,0 +1,831 @@
+:root {
+  --bg-color: #EDDD56;
+  --bm-color: #a19845;
+  --text-color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+}
+
+
+
+body{
+  background-color: var(--bg-color);
+  overflow:hidden;
+}
+
+/* For Desktop */
+
+.Homenavbar {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  font-family: 'Fredoka', sans-serif;
+  
+}
+.togglebtn {
+  display: none;
+}
+.sidepanelNav > .navlink {
+  display: none;
+}
+.navlink {
+  margin-left: 20px;
+  cursor: pointer;
+  color: #000;
+}
+
+.navlink:hover{
+  border-bottom: 2px solid black;
+}
+
+  .HomeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-color);
+    justify-content: space-evenly;
+    height: 100vh;
+    font-family: "Fredoka", sans-serif;
+    position: relative;
+    padding: 30px;
+  }
+
+  .HomeLogo {
+    display: flex;
+    justify-content: center;
+    /* background-color: pink; */
+    /* width: 100px; */
+    height: 20%;
+  }
+
+  .HomeLogo>img {
+    /* width: 100%;
+    height: 100%; */
+    object-fit: contain;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  .HeroTexts{
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .HeroInput{
+    background-color: transparent;
+    border:none;
+    border-bottom: 2px solid black;
+    /* padding: 20px; */
+    text-align: center;
+    outline: none;
+    font-size: 20px;
+    height: 2em;
+    min-width: 300px;
+    font-family: 'Fredoka';
+  }
+
+  .HeroInput::placeholder{
+    font-family: 'Fredoka';
+  }
+
+  .navlogo{
+    height: 60px;
+    position: absolute;
+    width: 100%;
+    top: inherit;
+    display: inherit;
+    justify-content: center;
+    align-items: inherit;
+  }
+
+  .navlogo>img{
+    height: 80%;
+    object-fit: contain;
+    
+  }
+
+  
+  .stats {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    /* background-color: #282c34; */
+    color: var(--text-color);
+    font-family: 'Fredoka';
+    font-size: 30px;
+    /* text-shadow: 1px 3px black; */
+  }
+  
+  .lives {
+    display: flex;
+    gap: 5px;
+  }
+
+  .textShadow{
+    text-shadow: 1px 4px black;
+  }
+  
+  .score {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+
+  .navbar{
+    padding: 7px 0px ;
+    /* background-color: blue; */
+    /* height: 60px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    /* justify-content: center */
+  }
+
+  .navbar>img{
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .HomeBtns{
+    display: flex;
+    width: 30%;
+    justify-content: center;
+  }
+  
+ .HomeHighScore{
+  height: 20%;
+  /* padding:20px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+ }
+
+  .HomeHighScore>h2{
+    display: flex;
+    font-weight: 500;
+  }
+
+  .HighScoreValue{
+    font-weight: 500;
+    margin-left: 10px ;
+  }
+
+  .btn{
+  
+  background-color: white;
+  border-radius: 30px;
+    padding: 10px 20px;
+  min-width: 100px;
+  box-shadow:1px 4px 0px hsl(0, 0%, 0%);
+  cursor: pointer;
+  border: 2px solid black;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: "Fredoka", sans-serif;
+  }
+  /* .HomeBtns>button:hover{
+    box-shadow: 5px 5px 0px hsla(60, 100%, 20%, 0.5);
+  
+  } */
+
+
+  
+.Game{
+  display: flex;
+  margin: 10px;
+  width: 100%;
+}
+
+.imageSide{
+  display: flex;
+  flex-direction: column;
+  /* background-color: green; */
+  height: 50vh;
+  width:50%;
+  
+}
+
+/* .ShowName{
+  font-family: 'Bangers';
+  color: white;
+  filter:drop-shadow(0px 3px black);
+  text-shadow: 0px 2px black;
+  -webkit-text-stroke: 1px black;
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+}
+
+.ShowName{
+
+} */
+
+.silhouette{
+height: 60vh;
+/* background-color: red; */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+
+.silhouette>img{
+  filter: brightness(0%);
+  height: 60%;
+  object-fit: contain;
+  /* margin-bottom: -15px; */
+  /* filter: drop-shadow(2px 3px 2px black); */
+  
+}
+.sil-shadow{
+  /* position: absolute; */
+  margin-top:-30px;
+  width: 40%;
+  background-color: rgb(255, 255, 255);
+  height: 40px;
+  z-index: -2;
+  /* filter: blur(2px); */
+  /* opacity:60%; */
+  box-shadow:  0px 4px black;
+  border-radius: 50%;
+}
+
+.hint{
+  display: flex;
+  justify-content: center;
+  /* background-color: pink; */
+  /* height: 20px; */
+}
+
+.volume{
+  margin-left: 10px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /* background-color: green; */
+  /* width: 100px; */
+}
+
+
+
+
+
+.dash {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  /* width: 100%; */
+  font-size: 40px;
+  font-family: "Fredoka";
+  /* border-bottom: 2px solid white; */
+  color: rgb(0, 0, 0);
+  /* margin-right: 1em; */
+  margin-bottom: 50px;
+}
+
+
+
+
+.keyboard {
+  width: 50%;
+  margin: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.word-keyboardWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 20px;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+}
+
+.keyboardBtn {
+  cursor: pointer;
+  height: 50px;
+  width:50px;
+  margin: 0.5em;
+  background-color: #ffffff;
+  /* padding: 1em; */
+  border-radius: 10px;
+  border: 2px solid black;
+  box-shadow: 1px 4px black;
+  /* background-color: #2d2d2d; */
+  color: black;
+  font-size: large;
+  text-transform: uppercase;
+}
+
+.game-over-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--bg-color);
+  padding: 20px;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.game-over-content {
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 400px;
+}
+
+.game-over-content h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.game-over-content .player-name,
+.game-over-content .current-score {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #555;
+}
+
+.game-over-content .high-score,
+.game-over-content .new-high-score {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.game-over-content .new-high-score {
+  color: green;
+}
+
+.game-over-content .high-score {
+  color: #888;
+}
+
+.HintContainer {
+  z-index: 5;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  padding: 20px;
+  margin: 20px auto;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: var(--bg-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  backdrop-filter: blur(400px);
+}
+.hintHead{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.HintContainer img {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: transform 0.2s ease;
+}
+
+.HintContainer img:hover {
+  transform: scale(1.1);
+}
+
+.HintContainer h1 {
+  font-size: 24px;
+  margin: 10px 0;
+  color: #333;
+  font-family: 'Bangers', cursive;
+}
+
+.HintContainer p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+
+#OtherPage{
+  margin:20px 40px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+
+}
+#OtherPage>h1{
+  color: #ffffff;
+  font-size: x-large;
+  font-family: 'bangers';
+  margin-bottom: 30px;
+  text-shadow: 0px 2px 0px black;
+  -webkit-text-stroke: 0.5px black;
+  
+}
+
+#OtherPage>p{
+  margin-bottom: 20px;
+  width: 100%;
+  font-family: 'fredoka';
+}
+#OtherPage li{
+  font-family: 'fredoka';}
+
+  #OtherPage>ul{
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  #OtherPage a{
+    color: #242424;
+    outline: none;
+    text-decoration: none;
+    -webkit-text-stroke: 0.5px black;
+  }
+  #OtherPage a:hover{
+    text-decoration: underline;
+    color: black;
+  }
+
+/* For Phones */
+@media (max-width: 600px) {
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; 
+}
+
+.Homenavbar {
+  /* background-color: red; */
+  padding: 30px 15px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  top: 0;
+  left: 0;
+}
+.Homenavbar > .navlink {
+  display: none;
+}
+
+.togglebtn {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  z-index: 3;
+}
+.togglebtn > img {
+  height: 50%;
+}
+
+.sidepanel {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 180px;
+  background-color: rgba(255, 255, 255, 0.804);
+  box-shadow: 2px 0px 20px hsla(0, 0%, 0%, 0.623);
+  padding: 10px;
+  backdrop-filter: blur(4px);
+}
+
+.panelclosed {
+  left: -300px; /* Hidden by default */
+  transition: left 0.3s ease;
+}
+
+.panelopened {
+  left: 0;
+  transition: left 0.3s ease;
+}
+
+.sidepanelNav {
+  /* background-color: gray; */
+  margin-top: 90px;
+  font-size: large;
+  width: 80%;
+  height: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.sidepanelNav > .navlink {
+  padding: 5px 0px;
+  margin-bottom: 10px;
+  border-bottom: 0.5px solid rgb(51, 51, 51);
+  display: block;
+}
+
+  .HomeContainer {
+      padding: 15px;
+  }
+
+  .HeroTexts {
+      font-size: 1.5rem;
+  }
+
+  .HeroInput {
+      font-size: 16px;
+      min-width: 200px;
+  }
+
+  .navbar {
+      padding: 8px 0;
+  }
+
+  .stats{
+    font-size: 20px;
+  }
+
+  .HomeBtns {
+      width: 100%;
+      justify-content: center;
+  }
+
+  .HomeHighScore {
+      width: 90%;
+  }
+
+  .btn {
+      font-size: 11px;
+      padding: 10px 14px;
+  }
+
+
+  .Game{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .imageSide{
+    display: flex;
+    flex-direction: column;
+    /* background-color: green; */
+    height: 50vh;
+    width:90%;
+    
+  }
+  
+  /* .ShowName{
+    font-family: 'Bangers';
+    color: white;
+    filter:drop-shadow(0px 3px black);
+    text-shadow: 0px 2px black;
+    -webkit-text-stroke: 1px black;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .ShowName{
+  
+  } */
+  
+  .silhouette{
+  height: 40vh;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  }
+  
+  .silhouette>img{
+    filter: brightness(0%);
+    height: 60%;
+    object-fit: contain;
+    /* margin-bottom: -15px; */
+    /* filter: drop-shadow(2px 3px 2px black); */
+    
+  }
+  .sil-shadow{
+    /* position: absolute; */
+    margin-top:-30px;
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+    height: 40px;
+    z-index: -2;
+    /* filter: blur(2px); */
+    /* opacity:60%; */
+    box-shadow:  0px 4px black;
+    border-radius: 50%;
+  }
+  
+  .hint{
+    display: flex;
+    justify-content: center;
+  }
+
+  
+
+  .dash {
+    text-align: center;
+    /* margin-top: 20px; */
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+    font-size: 20px;
+    font-family: "Fredoka";
+    /* border-bottom: 2px solid white; */
+    color: rgb(0, 0, 0);
+    margin-right: 0em;
+    margin-bottom: 20px;
+  }
+  
+  
+  
+  
+  .keyboard {
+    width: 90%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .word-keyboardWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 0px;
+    padding: 0px;
+
+  }
+  
+  .keyboard-row {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .keyboardBtn {
+    cursor: pointer;
+    height: 30px;
+    width:30px;
+    margin: 5px;
+    background-color: #ffffff;
+    /* padding: 1em; */
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 1px 4px black;
+    /* background-color: #2d2d2d; */
+    color: black;
+    font-size: small;
+    text-transform: uppercase;
+    outline: none;
+  }
+  
+  .HintContainer {
+    position: absolute;
+    top: 10%;
+    left:25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    padding: 20px;
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+.hintHead{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.HintContainer img {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    align-self: flex-end;
+    transition: transform 0.2s ease;
+}
+
+.HintContainer img:hover {
+    transform: scale(1.1);
+}
+
+.HintContainer h1 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #000000;
+    font-family: 'Bangers', cursive;
+    /* -webkit-text-stroke-color: black; */
+    -webkit-text-stroke: 2px solid black;
+}
+
+.HintContainer p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #111111;
+}
+
+  
+
+}
+
+
+@media (max-width: 400px) {
+
+  .keyboardBtn {
+    cursor: pointer;
+    height: 25px;
+    width:25px;
+    margin: 3px;
+    background-color: #ffffff;
+    /* padding: 1em; */
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 1px 4px black;
+    /* background-color: #2d2d2d; */
+    color: black;
+    font-size: small;
+    text-transform: uppercase;
+    outline: none;
+  }
+  
+  /* .btn{
+    padding: 10px 10px;
+  } */
+
+  .HintContainer{
+    position: absolute;
+    left:10%;
+  }
+
+  #OtherPage>p{
+    margin-bottom: 10px;
+    width: 100%;
+    font-family: 'fredoka';
+  }
+
+  #OtherPage>ul{
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+}
