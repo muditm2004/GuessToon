@@ -20,9 +20,7 @@ app.use(CORS({
 app.use(express.static(path.join(__dirname, '..', 'FrontEnd', 'dist'))); // Correct the path to FrontEnd/dist
 
 // Catch-all route for frontend, serving the React app's index.html
-app.get('*', (req, res) => {
-  res.redirect('/');
-});
+
 
 // MongoDB connection
 async function connectDB() {
@@ -46,6 +44,11 @@ app.get("/getchars", async (req, res) => {
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
+});
+
+
+app.get('*', (req, res) => {
+  res.redirect('/');
 });
 
 // Start the server
