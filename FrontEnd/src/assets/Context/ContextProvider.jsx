@@ -2,11 +2,13 @@ import React, { useContext, createContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAudioPlayer } from 'react-use-audio-player';
 import bgm from '../Audio/summer-memories-270159.mp3';
+import JSConfetti from 'js-confetti'
 
 export const GameContext = createContext();
 
 export default function ContextProvider({ children }) {
   const { load,pause,play,playing } = useAudioPlayer();
+  const jsConfetti = new JSConfetti()
 
   const [HighScore, setHighScore] = useState(0);
   const [Name, setName] = useState("");
@@ -80,6 +82,10 @@ export default function ContextProvider({ children }) {
     if (isCharacterGuessed && currentChar) {
       document.getElementById("image").style.filter =
         "drop-shadow(0px 3px black)";
+
+        jsConfetti.addConfetti({
+          emojis: ['🎉', '🥳', '🎊'],
+       })
 
       setTimeout(() => {
         document.getElementById("image").style.filter = "brightness(0%)";
