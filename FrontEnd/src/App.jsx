@@ -19,6 +19,7 @@ export default function App() {
           <Route path="/Game" element={<Game />} />
           <Route path="/about" element={<About />} />
           <Route path="/howtoplay" element={<HowtoPlay />} />
+          <Route path="/gameover" element={<GameOver />} />
         </Routes>
       </BrowserRouter>
 
