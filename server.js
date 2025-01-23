@@ -17,7 +17,7 @@ app.use(CORS({
 }));
 
 // Serve static files from the "dist" folder in FrontEnd
-app.use(express.static(path.join(__dirname, 'FrontEnd', 'dist'))); // Correct the path to FrontEnd/dist
+// app.use(express.static(path.join(__dirname, 'FrontEnd', 'dist'))); // Correct the path to FrontEnd/dist
 
 // Catch-all route for frontend, serving the React app's index.html
 
@@ -46,9 +46,9 @@ app.get("/getchars", async (req, res) => {
   }
 });
 
-
+app.use(express.static('./frontend/dist'));
 app.get('*', (req, res) => {
-  res.redirect('/');
+  res.sendFile(path.resolve(__dirname,"frontend","dist","index.html"));
 });
 
 // Start the server
