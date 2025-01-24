@@ -49,7 +49,9 @@ export default function ContextProvider({ children }) {
     if (newGame) {
     const fetchChars = async () => {
       try {
-        const response = await fetch("/getchars");
+        // console.log(process.env.REACT_APP_API_ADDRESS);
+        
+        const response = await fetch(`${import.meta.env.VITE_API_ADDRESS}/getchars`);
 
         if (response.ok) {
           const data = await response.json();
@@ -63,7 +65,7 @@ export default function ContextProvider({ children }) {
           console.log(currentChar);
         }
       } catch (error) {
-        console.log("error");
+        console.log(error);
       }
     };
 
